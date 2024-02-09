@@ -5,8 +5,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.ContextIdApplicationContextInitializer;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@ComponentScan(basePackages = "davidrios.BE_U2W1D5_WorkstationsRS.services")
 public class BeU2W1D5WorkstationsRsApplication {
 
 	public static void main(String[] args) {
