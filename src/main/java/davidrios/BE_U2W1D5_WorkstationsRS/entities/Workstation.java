@@ -11,6 +11,7 @@ import lombok.Setter;
 import java.util.List;
 
 @Entity
+@Table(name = "workstations")
 @Getter
 @Setter
 @NoArgsConstructor

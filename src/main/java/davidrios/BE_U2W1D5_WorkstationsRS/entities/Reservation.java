@@ -10,6 +10,7 @@ import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import java.time.LocalDate;
 
 @Entity
+@Table(name = "reservations")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -19,6 +20,8 @@ public class Reservation {
     @Setter(AccessLevel.NONE)
     private long id;
     private LocalDate date;
+    @ManyToOne
+    @JoinColumn(name = "employee_id")
     private Employee employee;
     @ManyToOne
     @JoinColumn(name = "workstation_id")
