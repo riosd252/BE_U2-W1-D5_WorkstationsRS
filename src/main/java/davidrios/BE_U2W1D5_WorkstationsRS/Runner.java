@@ -27,7 +27,8 @@ public class Runner implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(Runner.class);
+
+        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(BeU2W1D5WorkstationsRsApplication.class);
 
         CorporateCenter rome = (CorporateCenter) ctx.getBean("romeCenter");
         CorporateCenter milan = (CorporateCenter) ctx.getBean("milanCenter");
@@ -43,12 +44,13 @@ public class Runner implements CommandLineRunner {
         corporateCenterService.save(oslo);
         corporateCenterService.save(stockholm);
 
-       /* workstationService.save((Workstation) ctx.getBean("romeWorkstation"));
+       workstationService.save((Workstation) ctx.getBean("romeWorkstation"));
         workstationService.save((Workstation) ctx.getBean("milanWorkstation"));
         workstationService.save((Workstation) ctx.getBean("barcelonaWorkstation"));
         workstationService.save((Workstation) ctx.getBean("berlinWorkstation"));
         workstationService.save((Workstation) ctx.getBean("osloWorkstation"));
-        workstationService.save((Workstation) ctx.getBean("stockholmWorkstation")); */
+        workstationService.save((Workstation) ctx.getBean("stockholmWorkstation"));
+
 
     }
 }

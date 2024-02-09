@@ -7,8 +7,10 @@ import davidrios.BE_U2W1D5_WorkstationsRS.enums.WorkstationType;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 @Configuration
+@PropertySource("application.properties")
 public class AppConfig {
 
     private final Faker faker = new Faker();
